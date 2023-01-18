@@ -1,5 +1,5 @@
 FROM python:3.8-slim
-
+WORKDIR /
 # install python 
 RUN apt update && \
     apt install --no-install-recommends -y build-essential gcc && \
@@ -7,7 +7,7 @@ RUN apt update && \
 
 COPY requirements.txt requirements.txt
 COPY main.py main.py
-WORKDIR /
+
 RUN pip install -r requirements.txt --no-cache-dir
 
 
