@@ -4,7 +4,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/dtumlops-374307/testing']
 
-- name: Run container
+- name: 'gcr.io/cloud-builders/docker'
   run: |
     docker run gcr.io/dtumlops-374307/testing:latest
-    
