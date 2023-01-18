@@ -10,4 +10,4 @@ COPY main.py main.py
 WORKDIR /
 RUN pip install -r requirements.txt --no-cache-dir
 
-# ENTRYPOINT ["python", "-u", "main.py"]
+ENTRYPOINT ["python", "-u", "main.py"]
